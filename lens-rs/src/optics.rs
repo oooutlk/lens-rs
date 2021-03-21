@@ -374,7 +374,7 @@ mod impl_tuples {
 
     impl<Rv, A> Review<(A,)> for _0<Rv>
     where
-        Rv: Review<A>
+        Rv: Review<A>,
     {
         type From = Rv::From;
 
@@ -441,7 +441,7 @@ mod impl_tuples {
 
     impl<Ls, A> Lens<(A,)> for Both<Ls>
     where
-        Ls: Lens<A>
+        Ls: Lens<A>,
     {
         type To = Ls::To;
 
@@ -460,7 +460,7 @@ mod impl_tuples {
 
     impl<Rv, A> Review<(A,)> for Both<Rv>
     where
-        Rv: Review<A>
+        Rv: Review<A>,
     {
         type From = Rv::From;
 
@@ -510,7 +510,6 @@ mod impl_iters {
     impl_iter!(<T> VecDeque<T>);
     impl_iter!(<T> LinkedList<T>);
 }
-
 
 mod impl_box {
     use crate::*;
@@ -566,7 +565,7 @@ mod impl_box {
 
     impl<Ls, T> Lens<Box<T>> for _Box<Ls>
     where
-        Ls: Lens<T>
+        Ls: Lens<T>,
     {
         type To = Ls::To;
 
@@ -583,3 +582,5 @@ mod impl_box {
         }
     }
 }
+
+include!(concat!(env!("OUT_DIR"), "/optics.rs"));

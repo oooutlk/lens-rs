@@ -12,3 +12,9 @@ description = "lens implemented in rust"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lens-rs_derive = { path = "../lens-rs_derive", version = "0.0.6" }
+
+[build-dependencies]
+inwelling = "0.3"

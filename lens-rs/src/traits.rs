@@ -66,7 +66,6 @@ pub trait Lens<T> {
     fn view_mut<'a>(&self, source: &'a mut T) -> &'a mut Self::To;
 }
 
-
 // pub trait LensH<T> {
 //     type To;
 //     type ToRef<'a>;

@@ -3,7 +3,7 @@ pub mod traits;
 
 pub use traits::{Lens, Prism, Review, Traversal};
 
-pub use optics::{Mapped, _Err, _None, _Ok, _Some, _0, _1, _2, _3, _4, _5, _6, Both, __, _Box};
+pub use optics::{Both, Mapped, _Box, _Err, _None, _Ok, _Some, _0, _1, _2, _3, _4, _5, _6, __};
 
 #[macro_export]
 macro_rules! optics {
